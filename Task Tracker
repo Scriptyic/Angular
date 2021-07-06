@@ -1,0 +1,9 @@
+*********************************************************** TASK TRACKER APP*******************************************************************
+ Added 2 new components button and header.
+ Added the header component in appcomponent.html
+ Applied global styling for common elements in styles.css
+ Using interpolation added title to the header component. Used button component in the header of header component. 
+ Designed a button, styled it using [ngStyle] in button component html using component communication @Input and @Output which are set inside buttoncomponent.ts file and the attributes are given in headercomponent.html inside the app-button selector.
+ In this way i can use the button component to have any text on it have any color to it and perform in different functions as and where required thus making it reusable.
+ Used EventEmitter in button component.ts. and @Output to send the data ahead
+ Event: (click) -> User Defined fn: onClick() -> calls event emitter defined inside it: this.btnClick.emit() -> Dont forget to define Even emitter using @Output and EventEmitter, Output import abvove
