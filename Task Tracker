@@ -6,4 +6,18 @@
  Designed a button, styled it using [ngStyle] in button component html using component communication @Input and @Output which are set inside buttoncomponent.ts file and the attributes are given in headercomponent.html inside the app-button selector.
  In this way i can use the button component to have any text on it have any color to it and perform in different functions as and where required thus making it reusable.
  Used EventEmitter in button component.ts. and @Output to send the data ahead
- Event: (click) -> User Defined fn: onClick() -> calls event emitter defined inside it: this.btnClick.emit() -> Dont forget to define Even emitter using @Output and EventEmitter, Output import abvove
+ ---------------------------------------------------------- 06-07-2021 ------------------------------------------------
+ Event: (click) -> User Defined fn: onClick() -> calls event emitter defined inside it: this.btnClick.emit() -> Dont forget to define Eventemitter using @Output and EventEmitter, Output import above
+ Create an JSON API file having data 'mock-tasks.ts'. Since we are using typescript we need to create a model class (interface) for the fields.
+ Generate a component task.
+ Add the task selector inside the appcomponent.html below the app header selector to maintain the structure of the app.
+ Inside tasks.component.ts import the mock-tasks and interace (model) Task.
+ Define a tasks variable of the type array Task[] having everything from TASKS (mock-tasks)
+ Using *ngFor loop we can access the data inside the mock-tasks file using the variable we defined and access the fields needed using . operator like we have done in the (taskscomponent.html)
+ Generate a task item component. 
+ Next inside the task.component.html we change the p tags to task-item comp selectors and keep the loop as it is just declare a property binding attr [task] and assign it the for loop iterator task to hold values.
+ So like we did for the button text, color we will add @Input inside task-item-cmponent.ts and declare the property binding attr task. ALSO DONT FORGET TO IMPORT THE INTERFACE!!
+ Added task-item.component.css
+ used ng add @fortawesome/angular-fontawesome.
+ We used faTimes and ngStyle to create a red colored X delete icon.
+ Created a service 'task'. Implemented it in 2 ways normally using json file and another one using the observable.
